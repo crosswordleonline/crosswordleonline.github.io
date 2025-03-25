@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crosswordle - Where Wordle Meets Crossword Puzzles | Daily Word Game Challenge</title>
+    <meta name="description" content="Play Crosswordle, the innovative word puzzle game that combines Wordle and crosswords. Challenge yourself with daily puzzles, track your progress, and compete with friends. Perfect for word game enthusiasts!">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="crosswordle, word game, puzzle game, wordle, crossword, daily word puzzle, word challenge, brain games, word puzzles">
+    <meta property="og:title" content="Crosswordle - Daily Word Puzzle Challenge">
+    <meta property="og:description" content="Play Crosswordle - The perfect blend of Wordle and crossword puzzles. New challenges daily!">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Crosswordle">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        /* Ensure smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Improve mobile touch targets */
+        @media (max-width: 640px) {
+            .touch-target {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <main class="flex-1 bg-gray-50 py-2 sm:py-3">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <!-- Game Section -->
+            <div class="w-full flex flex-col items-center p-2 sm:p-4">
+                <div class="w-full max-w-md sm:max-w-lg md:max-w-xl aspect-[9/16] sm:aspect-[3/4] md:aspect-[4/5] relative">
+                    <iframe
+                        title="Crosswordle - Daily Word Puzzle Challenge"
+                        src="https://crosswordle.serializer.ca/"
+                        class="absolute top-0 left-0 w-full h-full border-0 rounded-lg shadow-lg bg-white"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
+                </div>
+            </div>
+
+            <!-- Intro Section -->
+            <div class="mt-8 sm:mt-12 flex flex-col items-center px-3 sm:px-6 lg:px-8">
+                <!-- Header Section -->
+                <div class="w-full max-w-4xl text-center space-y-4 sm:space-y-8 mb-8 sm:mb-12">
+                    <h1 class="text-4xl sm:text-5xl font-bold text-gray-900">Crosswordle</h1>
+                    <p class="text-sm sm:text-base text-gray-600">
+                        Welcome to Crosswordle - where Wordle meets crossword puzzles! Experience the perfect blend of two
+                        classic word games. Solve interconnected word puzzles where each guess affects multiple words, creating
+                        an exciting new challenge for word game enthusiasts.
+                    </p>
+                </div>
+
+                <!-- Main Content -->
+                <div class="max-w-6xl w-full space-y-8 sm:space-y-10">
+                    <div class="bg-white p-4 sm:p-8 lg:p-12 rounded-xl shadow-md border border-gray-100">
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">How to Play Crosswordle?</h2>
+
+                        <!-- Step 1: Basic Rules -->
+                        <div class="mb-12 sm:mb-24 flex flex-col items-center">
+                            <div class="flex items-center gap-3 mb-4 sm:mb-6">
+                                <div class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-violet-100 flex items-center justify-center">
+                                    <span class="text-lg sm:text-xl font-bold text-violet-600">01</span>
+                                </div>
+                                <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800 text-center">Understanding the Grid</h2>
+                            </div>
+                            <div class="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 text-center max-w-3xl mx-auto px-2">
+                                The game features a crossword-style grid where words intersect. Each word is five letters long, and letters at intersections must work for both across and down words.
+                            </div>
+                            <div class="bg-gray-50 p-4 sm:p-6 rounded-lg mt-4 sm:mt-6 w-full">
+                                <div class="text-base sm:text-lg font-medium mb-3 sm:mb-4 text-center">Color Guide:</div>
+                                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-center gap-3 sm:gap-6">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-5 h-5 sm:w-6 sm:h-6 rounded bg-[#787c7e]"></div>
+                                        <div class="text-sm sm:text-base">Not in word</div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-5 h-5 sm:w-6 sm:h-6 rounded bg-[#c9b458]"></div>
+                                        <div class="text-sm sm:text-base">Wrong position</div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-5 h-5 sm:w-6 sm:h-6 rounded bg-[#6aaa64]"></div>
+                                        <div class="text-sm sm:text-base">Correct position</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Making Guesses -->
+                        <div class="mb-12 sm:mb-24 flex flex-col items-center">
+                            <div class="flex items-center gap-3 mb-4 sm:mb-6">
+                                <div class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-violet-100 flex items-center justify-center">
+                                    <span class="text-lg sm:text-xl font-bold text-violet-600">02</span>
+                                </div>
+                                <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800 text-center">Making Your Guesses</h2>
+                            </div>
+                            <div class="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 text-center max-w-3xl mx-auto px-2">
+                                Select a direction (across or down) and enter your five-letter word guess. The colors will show how close you are to both intersecting words.
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg mt-4 w-full">
+                                <p class="text-sm sm:text-base text-center">
+                                    Remember: Letters at intersections affect both words, so choose carefully!
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Using Feedback -->
+                        <div class="mb-12 sm:mb-24 flex flex-col items-center">
+                            <div class="flex items-center gap-3 mb-4 sm:mb-6">
+                                <div class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-violet-100 flex items-center justify-center">
+                                    <span class="text-lg sm:text-xl font-bold text-violet-600">03</span>
+                                </div>
+                                <h2 class="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800 text-center">Using the Feedback</h2>
+                            </div>
+                            <div class="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 text-center max-w-3xl mx-auto px-2">
+                                Use the color feedback to deduce correct letters and positions. Pay special attention to intersection points as they provide clues for multiple words.
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg mt-4 w-full">
+                                <p class="text-sm sm:text-base text-center">
+                                    Green letters are locked in their positions. Yellow letters need new positions. Gray letters should be avoided.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Section -->
+                        <div class="bg-white rounded-xl shadow-sm">
+                            <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 text-center">
+                                Frequently Asked Questions
+                            </h2>
+
+                            <div class="space-y-3 sm:space-y-4">
+                                <div class="bg-white rounded-xl border border-gray-100 overflow-hidden">
+                                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 p-3 sm:p-4 pb-2">
+                                        How often are puzzles updated?
+                                    </h3>
+                                    <div class="text-sm sm:text-base text-gray-600 px-3 sm:px-4 pb-3 sm:pb-4">
+                                        A new puzzle is released daily at midnight. All players receive the same puzzle, allowing you to compare strategies and attempts with friends.
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-xl border border-gray-100 overflow-hidden">
+                                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 p-3 sm:p-4 pb-2">
+                                        Is there a time limit?
+                                    </h3>
+                                    <div class="text-sm sm:text-base text-gray-600 px-3 sm:px-4 pb-3 sm:pb-4">
+                                        No, take your time to solve the puzzle. However, you only get one puzzle per day, so make your guesses count!
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-xl border border-gray-100 overflow-hidden">
+                                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 p-3 sm:p-4 pb-2">
+                                        How do intersections work?
+                                    </h3>
+                                    <div class="text-sm sm:text-base text-gray-600 px-3 sm:px-4 pb-3 sm:pb-4">
+                                        Letters at intersections must work for both the across and down words. This means these positions need extra consideration as they affect multiple words simultaneously.
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-xl border border-gray-100 overflow-hidden">
+                                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 p-3 sm:p-4 pb-2">
+                                        What's the best strategy for beginners?
+                                    </h3>
+                                    <div class="text-sm sm:text-base text-gray-600 px-3 sm:px-4 pb-3 sm:pb-4">
+                                        Start with common five-letter words that have frequently used letters (like S, T, R, N, and vowels). Focus on intersection points first, as these positions affect multiple words and provide more clues. Practice with the tutorial mode to get familiar with the mechanics.
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-xl border border-gray-100 overflow-hidden">
+                                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 p-3 sm:p-4 pb-2">
+                                        Can I play previous puzzles?
+                                    </h3>
+                                    <div class="text-sm sm:text-base text-gray-600 px-3 sm:px-4 pb-3 sm:pb-4">
+                                        While the main focus is on daily puzzles, you can practice your skills in tutorial mode. Each day brings a fresh challenge, encouraging players to return daily for new puzzles and compare their solving strategies with friends.
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-xl border border-gray-100 overflow-hidden">
+                                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 p-3 sm:p-4 pb-2">
+                                        How do I track my progress?
+                                    </h3>
+                                    <div class="text-sm sm:text-base text-gray-600 px-3 sm:px-4 pb-3 sm:pb-4">
+                                        The game keeps track of your daily statistics, including win streaks, average attempts, and completion time. You can share your results with friends without revealing the answers, making it fun to compare strategies and achievements.
+                                    </div>
+                                </div>
+
+                                <div class="bg-white rounded-xl border border-gray-100 overflow-hidden">
+                                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 p-3 sm:p-4 pb-2">
+                                        What happens if I get stuck?
+                                    </h3>
+                                    <div class="text-sm sm:text-base text-gray-600 px-3 sm:px-4 pb-3 sm:pb-4">
+                                        If you're finding a puzzle particularly challenging, try taking a break and coming back with fresh eyes. Remember to use the color feedback from your previous guesses and focus on the intersection points. You can also practice similar patterns in tutorial mode to improve your skills.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm text-gray-500">
+                © 2024 Crosswordle. All rights reserved. Play daily word puzzles and challenge your friends!
+            </p>
+        </div>
+    </footer>
+</body>
+</html> 
